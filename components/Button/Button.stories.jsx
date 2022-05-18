@@ -5,6 +5,20 @@ import Button from './Button';
 export default {
   title: 'Example/Button',
   component: Button,
+  argTypes: {
+    color: {
+      options: ['primary', 'secondary'],
+      control: {
+        type: 'radio',
+      },
+    },
+    variant: {
+      options: [undefined, 'contained', 'outlined'],
+      control: {
+        type: 'radio',
+      },
+    },
+  },
 };
 
 const Template = (args) => <Button {...args} />;
